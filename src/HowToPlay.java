@@ -106,7 +106,7 @@ class HowToPlay extends JPanel {
         int totalHeight = lineHeight * lines.length;
         int startY = h / 2 - totalHeight / 2 + fm.getAscent();
 
-        Color mainColor = new Color(59, 47, 26); // brownish
+        Color mainColor = new Color(59, 47, 25); // brownish
         Color shadowColor = new Color(0, 0, 0, 160);
 
         for (int i = 0; i < lines.length; i++) {

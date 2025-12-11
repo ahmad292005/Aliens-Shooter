@@ -3,15 +3,10 @@ import java.awt.*;
 import java.awt.event.MouseAdapter;
 import java.awt.event.MouseEvent;
 
-// HoverUtil: helper لاستخدامه مع أي JButton في المشروع
+// HoverUtil لاستخدامه مع أي JButton في المشروع
 class HoverUtil {
 
-    /**
-     * Hover effect خاص بالأزرار اللي أيقونتها Image (image buttons).
-     * btn: الزر
-     * baseImage: الصورة الأصلية (unscaled) المستخدمة للأيقونة
-     * normalW/normalH: الحجم الطبيعي الذي تستخدمه للزر (pixel)
-     */
+
     public static void applyImageButtonHover(JButton btn, Image baseImage, int normalW, int normalH) {
         if (baseImage == null || btn == null) return;
 
@@ -31,7 +26,7 @@ class HoverUtil {
         btn.addMouseListener(new MouseAdapter() {
             @Override
             public void mouseEntered(MouseEvent e) {
-                // نحاول نوسّع مركز الزر بحيث يظل مركزه تقريبا ثابت
+                // نحاول نوسّع مركز الزر بحيث يظل  المركز تقريبا ثابت
                 btn.setIcon((ImageIcon) btn.getClientProperty("hoverIcon"));
             }
 
@@ -42,9 +37,6 @@ class HoverUtil {
         });
     }
 
-    /**
-     * Hover effect لــ text buttons: يضيف خلفية شفافة صغيرة على hover ويد اليد.
-     */
     public static void applyTextButtonHover(JButton btn) {
         if (btn == null) return;
         Color normalBg = btn.getBackground();
