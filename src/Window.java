@@ -12,7 +12,7 @@ class Window extends JFrame {
     GamePanel gamePanel;
 
     public Window() {
-        setTitle("Mohammed Amr Game");
+        setTitle("Aliens_shooter Game");
         setSize(1000, 900);
         setLocationRelativeTo(null);
         setDefaultCloseOperation(EXIT_ON_CLOSE);
